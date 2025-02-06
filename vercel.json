@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "scraping.py", "use": "@vercel/python" },
+      { "src": "dashboard.py", "use": "@vercel/python" }
+    ],
+    "routes": [
+      { "src": "/scrape", "dest": "scraping.py" },
+      { "src": "/", "dest": "dashboard.py" }
+    ],
+    "crons": [
+      {
+        "path": "/scrape",
+        "schedule": "0 10 * * *"  
+      }
+    ]
+  }

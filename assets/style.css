@@ -1,0 +1,429 @@
+:root {
+    --police: Oswald;
+    --div-color: #292833;
+    --html-color: #1D1C22;
+    --margin-interdiv: 8px 0;
+    --font-color: #CCCCCC;
+    --red: #FF4444;
+}
+
+html {
+    background-color: var(--html-color);
+    font-family: var(--police);
+    color: var(--font-color);
+    overflow: hidden;
+}
+
+a {
+    color: var(--font-color);
+    font-family: var(--police);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--red);
+}
+
+.btn {
+    cursor: pointer;
+    border-style: solid;
+    border-color: whitesmoke;
+    border-radius: 5px;
+    border-width: 2px;
+    background-color: transparent;
+    color: var(--font-color);
+    font-family: var(--police);
+    margin-top: 7px;
+}
+
+.btn:hover {
+    color: var(--red);
+    border-color: var(--red);
+}
+
+#camembert {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+#camembert h3 {
+    margin: 10px 0;
+}
+
+#camembert, #topweek, #toptotal, #carte, #courbe, #source {
+    width: 100%;
+    border-radius: 13px;
+    background-color: var(--div-color);
+    margin: var(--margin-interdiv);
+    padding: 10px;
+    box-sizing: border-box;
+    transition: transform 0.6s;
+}
+
+#camembert:hover, #source:hover, #toptotal:hover, #topweek:hover, #carte:hover, #courbe:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#carte {
+    height: 64%;
+}
+
+#center {
+    width: 59%;
+}
+
+#center, #left, #right {
+    display: inline-block;
+    height: 90%;
+    margin: 0.25%;
+    text-align: center;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.country-item-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.country-list-item {
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+.country-name {
+    color: var(--font-color);
+    font-size: 18px;
+    font-weight: normal;
+    text-align: left;
+    line-height: 1.3;
+    padding-left: 20px;
+}
+
+.country-value {
+    color: var(--red);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 20px;
+    white-space: nowrap;
+}
+
+#courbe {
+    height: 34%;
+}
+
+.dash-graph {
+    background-color: var(--div-color) !important;
+    font-family: var(--police) !important;
+}
+
+.dash-graph .legend {
+    background-color: #fff !important;
+}
+
+#dashboard {
+    height: 97vh;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--html-color);
+}
+
+#div-line {
+    vertical-align: top;
+}
+
+#dropdown-country {
+    background-color: var(--div-color) !important;
+    color: var(--font-color) !important;
+    border-color: var(--font-color) !important;
+}
+
+#footer {
+    text-align: center;
+}
+
+#graph-carte {
+    font-family: var(--police) !important;
+}
+
+#graph-pie {
+    width: 100%;
+    height: 100%;
+    background-color: var(--div-color);
+    margin-top: 1px;
+}
+
+#graph-pie, #graph-topweek, #graph-carte {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    margin: 0;
+}
+
+h4 {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+h6 {
+    margin: 5px 0;
+}
+
+#input-line {
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#left, #right {
+    width: 19%;
+}
+
+#line-chart {
+    width: 80%;
+    display: inline-block;
+    vertical-align: top;
+    height: 145px;
+    background-color: var(--div-color);
+}
+
+#line-country-filter {
+    max-height: 45px;
+    height: 45px;
+    display: block;
+    text-align: left;
+}
+
+#line-region-filter {
+    height: 45px;
+    max-height: 45px;
+    display: block;
+    text-align: left;
+}
+
+#line-virus-filter {
+    max-height: 45px;
+    height: 45px;
+    display: block;
+    text-align: left;
+}
+
+#link-github {
+    float: top-right;
+    position: relative;
+    z-index: 2;
+    width: 10px;
+}
+
+#modal {
+    color: var(--font-color);
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    display: inline-flex;
+    z-index: 101;
+    height: 105%;
+    width: 100%;
+    margin-top: -750px;
+    margin-left: -1%;
+    margin-right: 0;
+}
+
+.modal-content {
+    background-color: rgba(0,0,0,0.65);
+    width: 100%;
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-top: 100px;
+    border-radius: 15px;
+    border-color: rgba(255, 255, 255, 0.65);
+    border-width: 5px;
+    border-style: solid;
+    overflow-y: scroll;
+    padding: 10px 10px 10px 20px;
+    height: 72%;
+}
+
+.modal-paragraph {
+    font-size: 15px;
+    text-align: justify;
+    padding: 0 20px;
+    text-indent: 30px;
+}
+
+.modal-section {
+    font-size: 18px;
+    padding-top: 15px;
+    text-decoration-color: var(--font-color);
+    text-decoration-style: solid;
+    text-decoration: underline;
+    font-weight: lighter;
+}
+
+#modal-title {
+    text-align: center;
+    font-size: 25px;
+}
+
+.Select {
+    color: var(--font-color);
+    background-color: var(--div-color) !important;
+    padding: 5px;
+    border-radius: 4px;
+    height: 40px !important;
+    max-height: 40px !important;
+}
+
+.Select-control {
+    background-color: var(--div-color) !important;
+    color: var(--font-color) !important;
+    border: 1px solid var(--font-color) !important;
+}
+
+.Select-menu-outer {
+    background-color: var(--div-color) !important;
+    color: var(--font-color) !important;
+}
+
+.Select-multi-value-wrapper {
+    height: 32px;
+    overflow-y: scroll;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.Select-option {
+    background-color: var(--div-color) !important;
+    color: var(--font-color) !important;
+}
+
+.Select-value-label {
+    color: var(--font-color) !important;
+}
+
+#source {
+    height: 13%;
+}
+
+#source p {
+    text-align: left;
+    font-size: 9px;
+    font-family: var(--police);
+}
+
+#titre {
+    height: 6%;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: var(--html-color);
+    padding: 7px;
+    border-bottom: 2px solid var(--font-color);
+    display: flex;
+}
+
+#titre-center {
+    width: 80%;
+    text-transform: uppercase;
+}
+
+#titre-left {
+    width: 10%;
+}
+
+#titre-right {
+    width: 10%;
+    padding-top: 7px;
+    font-weight: lighter;
+}
+
+#titre-right a {
+    border-style: solid;
+    border-color: var(--font-color);
+    border-radius: 5px;
+    border-width: 2px;
+    padding: 2px;
+    margin-top: 7px;
+    font-size: 13px;
+}
+
+#titre-right a:hover {
+    border-color: var(--red);
+}
+
+.top-countries-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.top-ten-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: var(--font-color);
+}
+
+#toptotal {
+    height: 85%;
+}
+
+.top-total-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.top-total-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#topweek {
+    height: 58%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.total-number {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--red);
+    margin: 30px 0;
+}
+
+.total-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    color: var(--font-color);
+}
+
+#virus-topweek {
+    color: var(--font-color);
+    margin-top: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
