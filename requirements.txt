@@ -6,3 +6,8 @@ requests
 beautifulsoup4
 schedule
 numpy
+gunicorn==20.0.4
+os
+datetime
+typing
+json
